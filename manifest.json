@@ -1,0 +1,24 @@
+  {
+    "name": "BFB",
+    "version": "1.0",
+    "description": "BTTV but FB",
+    "permissions": ["declarativeContent", "activeTab", "tabs"],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "web_accessible_resources": [
+        "images/*.png"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://messenger.com/*","https://www.messenger.com/*"],
+            "js": ["content.js"],
+            "run_at": "document_end"
+        }
+    ],
+    "browser_action": {
+      "default_popup": "popup.html"
+    },
+    "manifest_version": 2
+  }
