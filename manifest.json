@@ -12,7 +12,7 @@
     ],
     "content_scripts": [
         {
-            "matches": ["https://messenger.com/*","https://www.messenger.com/*"],
+            "matches": ["https://facebook.com/*","https://www.facebook.com/*","https://messenger.com/*","https://www.messenger.com/*"],
             "js": ["content.js"],
             "run_at": "document_end"
         }
